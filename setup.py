@@ -5,7 +5,7 @@ with open('README.md', 'r', encoding='utf-8') as fh:
 
 setuptools.setup(
     name='mod-nest-exp',
-    version='1.0.2',
+    version='1.0.3',
     author='Aviv Brook',
     author_email='avbrook@ucsc.edu',
     description='An algorithm that computes modular nested exponentiation efficiently',
@@ -21,6 +21,7 @@ setuptools.setup(
         'Operating System :: OS Independent'
     ],
     package_dir={'': 'src'},
+    install_requires=['gmpy2==2.0.8', 'sympy==1.7.1'],
     packages=setuptools.find_packages(where='src'),
     python_requires='>=3.6'
 )

@@ -1,7 +1,13 @@
 from typing import List
-from gmpy2 import gcd, powmod, gcdext
 from sympy.ntheory import totient
 from .utils import pow_lt, pow_list
+
+try:
+    from gmpy2 import gcd, powmod, gcdext
+except ImportError:
+    from math import gcd
+    powmod = pow
+    from .gcd import ext_gcd as gcdext
 
 def mod_nest_exp(seq: List[int], m: int) -> int:
     """
