@@ -36,6 +36,7 @@ Without this algorithm, this type of computation is unfeasible for modern comput
 ## Prerequisites
 
 ```bash
+# cpython makes the computations more efficient
 $ apt install libgmp-dev libmpfr-dev libmpc-dev
 $ pip install sympy gmpy2
 ```
@@ -54,3 +55,7 @@ $ python
 >>> mod_nest_exp([6, 5, 4, 3, 2], 1948502738)
 mpz(951546056) # uses gmpy2 if available
 ```
+
+## To-do
+
+- [ ] add a factorisation module in case the user does not have `sympy` installed

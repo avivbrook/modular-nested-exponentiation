@@ -58,6 +58,7 @@ def test_core(
                     print('\t\t%s: %.2f ms' % (name, value*1000))
         
 
+# latex functionality does not work as of now
 if __name__ == '__main__':
     bit_lengths = (16, 128, 1024)
     list_lengths = (10, 100, 1000)
