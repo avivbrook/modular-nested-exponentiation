@@ -21,10 +21,10 @@ An algorithm that computes modular nested exponentiation efficiently.
         <td>Supported versions</td>
         <td><img src='https://img.shields.io/pypi/pyversions/mod-nest-exp.svg'></td>
     </tr>
-    <!-- <tr>
+    <tr>
         <td>Downloads</td>
         <td><img src='https://img.shields.io/pypi/dm/mod-nest-exp.svg'></td>
-    </tr> -->
+    </tr>
 </table>
 
 ## Generalised modular exponentiation
@@ -35,9 +35,12 @@ Without this algorithm, this type of computation is unfeasible for modern comput
 
 ## Prerequisites
 
+`sympy` is currently required as the algorithm uses its `totient` function. `gmpy2` is not required but offers more efficient versions to some of Python's built-in math functions.
+
+In the future, a custom `totient` function will be added so that `sympy` is not required and the module will be self-contained.
+
 ```bash
-# cpython makes the computations more efficient
-$ apt install libgmp-dev libmpfr-dev libmpc-dev
+$ apt install libgmp-dev libmpfr-dev libmpc-dev # for gmpy2
 $ pip install sympy gmpy2
 ```
 
@@ -55,7 +58,3 @@ $ python
 >>> mod_nest_exp([6, 5, 4, 3, 2], 1948502738)
 mpz(951546056) # uses gmpy2 if available
 ```
-
-## To-do
-
-- [ ] add a factorisation module in case the user does not have `sympy` installed
