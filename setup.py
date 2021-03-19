@@ -5,7 +5,7 @@ with open('README.md', 'r', encoding='utf-8') as fh:
 
 setuptools.setup(
     name='mod-nest-exp',
-    version='1.0.6',
+    version='1.0.7',
     author='Aviv Brook',
     author_email='avbrook@ucsc.edu',
     description='An algorithm that computes modular nested exponentiation efficiently',
