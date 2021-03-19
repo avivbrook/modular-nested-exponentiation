@@ -16,12 +16,8 @@ An algorithm that computes modular nested exponentiation efficiently.
         <td><img src='https://img.shields.io/pypi/implementation/mod-nest-exp.svg'></td>
     </tr>
     <tr>
-        <td>Status</td>
-        <td><img src='https://img.shields.io/pypi/status/mod-nest-exp.svg'></td>
         <td>Supported versions</td>
         <td><img src='https://img.shields.io/pypi/pyversions/mod-nest-exp.svg'></td>
-    </tr>
-    <tr>
         <td>Downloads</td>
         <td><img src='https://img.shields.io/pypi/dm/mod-nest-exp.svg'></td>
     </tr>

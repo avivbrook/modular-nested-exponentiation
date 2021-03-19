@@ -1,0 +1,7 @@
+version: '3.9'
+
+services:
+  test-env:
+    build:
+      context: .
+    container_name: test-env
