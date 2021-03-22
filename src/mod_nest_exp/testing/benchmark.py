@@ -1,4 +1,4 @@
-from typing import Callable, Iterable
+from typing import Callable, Iterable, List
 from time import time
 from .utils import all_equal
 
@@ -12,7 +12,7 @@ def _trial(function: Callable, args: Iterable):
     }
 
 def benchmark(
-    functions: list[Callable],
+    functions: List[Callable],
     arguments: Iterable,
     validate: bool = False,
     max_iters: int = None,

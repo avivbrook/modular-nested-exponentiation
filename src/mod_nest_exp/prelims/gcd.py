@@ -15,9 +15,6 @@ def ext_gcd(a: int, b: int) -> Tuple[int, int, int]:
     -------
         gcd(a,b), x, y.
     """
-    if a < 0 or b < 0:
-        raise ValueError('a and b must be nonnegative integers')
-    
     prev_r, r, prev_x, x = a, b, 1, 0
     while r: # while remainder > 0
         q = prev_r // r # quotient

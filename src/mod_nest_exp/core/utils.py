@@ -5,14 +5,14 @@ from math import ceil
 def pow_lt(seq: List[int], k: Decimal) -> bool:
     """
     Given an arbitrarily long sequence of positive integers
-    seq = [e₁, e₂, e₃, ..., eₙ] and a positive number k, returns True if and only if
-    e₁^(e₂^(e₃^(···^eₙ))) < k.
-    Inputs are not validated. That is, k is assumed to be positive and the
-    elements of seq are assumed to be positive integers.
+    seq = [e₁, e₂, e₃, ...] and a positive number k, returns True if and only if
+    e₁^(e₂^(e₃^···)) < k.
+
     Parameters
     ----------
     seq: list of positive integers.
     k: positive number.
+
     Returns
     -------
         True if and only if seq[0]^(seq[1]^(seq[2]^···)) < k.
@@ -32,12 +32,13 @@ def pow_lt(seq: List[int], k: Decimal) -> bool:
 
 def pow_list(seq: List[Decimal]) -> Decimal:
     """
-    Given an arbitrarily long sequence of numbers seq = [e₁, e₂, e₃, ..., eₙ],
-    computes e₁^(e₂^(e₃^(···^eₙ))).
-    The elements of seq are assumed to be numbers without validation.
+    Given an arbitrarily long sequence of numbers seq = [e₁, e₂, e₃, ...],
+    computes e₁^(e₂^(e₃^···)).
+
     Parameters
     ----------
     seq: list of numbers.
+    
     Returns
     -------
         seq[0]^(seq[1]^(seq[2]^···)).

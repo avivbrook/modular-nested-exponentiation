@@ -1,13 +1,17 @@
 from typing import List
-from sympy.ntheory import totient
 from .utils import pow_lt, pow_list
 
 try:
-    from gmpy2 import gcd, powmod, gcdext
+    from sympy.ntheory import totient
+except (ImportError, ModuleNotFoundError):
+    from mod_nest_exp.prelims import totient
+
+try:
+    from gmpy2 import gcd, powmod, gcdext as ext_gcd
 except ImportError:
     from math import gcd
     powmod = pow
-    from .gcd import ext_gcd as gcdext
+    from mod_nest_exp.prelims import ext_gcd
 
 def mod_nest_exp(seq: List[int], m: int) -> int:
     """
@@ -24,12 +28,6 @@ def mod_nest_exp(seq: List[int], m: int) -> int:
     -------
         seq[0]^(seq[1]^(seq[2]^···)) mod m.
     """
-    if m < 1:
-        raise ValueError('m must be a positive integer')
-    for a in seq:
-        if a < 1:
-            raise ValueError('seq may only contain positive integers')
-
     if m == 1: # 1 divides every integer
         return 0
     l = len(seq)
@@ -56,7 +54,7 @@ def mod_nest_exp(seq: List[int], m: int) -> int:
             k += 1
             g_ = gcd(g, n)
         h = m//n
-        _, x, y = gcdext(n, h)
+        _, x, y = ext_gcd(n, h)
         return (h*(y%n)*powmod(b, _mod_nest_exp(e, totient(n)), n)+
                 n*(x%h)*(powmod(b, pow_list(e), h) if pow_lt(e, k) else 0))%m
     
