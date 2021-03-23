@@ -1,6 +1,6 @@
 # modular-nested-exponentiation
 
-An algorithm that computes modular nested exponents (or towers) efficiently.
+An algorithm that computes modular nested exponentiation efficiently.
 
 [![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/avivbrook/modular-nested-exponentiation/Test/master?logo=github&style=flat-square)](https://github.com/avivbrook/modular-nested-exponentiation/actions)
 [![PyPI - License](https://img.shields.io/pypi/l/mod-nest-exp?style=flat-square)](https://choosealicense.com/licenses/gpl-3.0/)
@@ -19,7 +19,7 @@ An algorithm that computes modular nested exponents (or towers) efficiently.
 
 ## 🗺️ Overview
 
-`mod-nest-exp` exports a Python function `mod_nest-exp` that takes as input an arbitrarily long sequence of positive integers `a₁, a₂, ..., aₙ` and a positive integer `m` and computes `a₁^(a₂^(···^aₙ)) mod m` efficiently (that is, without computing the value of the nested exponent).
+`mod-nest-exp` exports a Python function `mod_nest_exp` that takes as input an arbitrarily long sequence of positive integers `a₁, a₂, ..., aₙ` and a positive integer `m` and computes `a₁^(a₂^(···^aₙ)) mod m` efficiently (that is, without computing the value of the nested exponent).
 
 ## 🏳️ Prerequisites
 
@@ -44,7 +44,7 @@ A development version can be installed from GitHub
 using `setuptools`, provided you have `sympy` installed already:
 ```console
 $ git clone https://github.com/avivbrook/modular-nested-exponentiation
-$ cd modular-towers
+$ cd modular-nested-exponentiation
 $ python setup.py install
 ```
 
