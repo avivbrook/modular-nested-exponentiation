@@ -39,9 +39,9 @@ jobs:
     - name: Install library
       run: pip install .
     - name: Test in debug mode
-      run: python -m coverage run -p --source=src/mod_nest_exp/core -m pytest
+      run: python -m coverage run -p -m pytest
     - name: Test in optimised mode
-      run: python -O -m coverage run -p --source=src/mod_nest_exp/core -m pytest
+      run: python -O -m coverage run -p -m pytest
     - name: Combine coverage reports
       run: python -m coverage combine
     - name: Upload coverage to Codecov
