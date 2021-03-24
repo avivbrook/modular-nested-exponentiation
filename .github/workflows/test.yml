@@ -41,7 +41,7 @@ jobs:
     - name: Install build dependencies
       run: python -m pip install -U wheel setuptools
     - name: Install CI requirements
-      run: python -m pip install -U coverage codacy-coverage
+      run: python -m pip install -U pytest coverage codacy-coverage
     - name: Install library
       run: pip install .
     - name: Test in debug mode
