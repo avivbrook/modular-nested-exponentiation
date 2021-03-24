@@ -1,9 +1,9 @@
-from random import randint
+from random import randrange
 from typing import Iterable
 from itertools import groupby
 
 def rand_n_digit_int(num_digits: int, base: int = 2):
-    return randint(base**(num_digits-1), base**num_digits-1)
+    return randrange(base**(num_digits-1), base**num_digits)
 
 def all_equal(seq: Iterable):
     g = groupby(seq)

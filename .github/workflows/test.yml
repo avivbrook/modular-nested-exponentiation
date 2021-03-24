@@ -1,6 +1,6 @@
 name: Test
 
-on: push
+on: [push, pull_request]
 
 jobs:
   test_linux:
@@ -23,6 +23,12 @@ jobs:
         - python-version: 3.9
           python-release: v3.9
           python-impl: CPython
+        - python-version: pypy-3.6
+          python-release: v3.6
+          python-impl: PyPy
+        - python-version: pypy-3.7
+          python-release: v3.7
+          python-impl: PyPy
     steps:
     - name: Checkout code
       uses: actions/checkout@master
@@ -31,6 +37,23 @@ jobs:
       with:
         python-version: ${{ matrix.python-version }}
     - name: Update pip
-      run: python -m pip install -U pip wheel setuptools
+      run: python -m pip install -U pip
+    - name: Install build dependencies
+      run: python -m pip install -U wheel setuptools
+    - name: Install CI requirements
+      run: python -m pip install -U coverage codacy-coverage
     - name: Install library
       run: pip install .
+    - name: Test in debug mode
+      run: python -m coverage run -p --source=src/mod_nest_exp -m pytest
+    - name: Test in optimised mode
+      run: python -O -m coverage run -p --source=src/mod_nest_exp -m pytest
+    - name: Combine coverage reports
+      run: python -m coverage combine
+    - name: Upload coverage to Codecov
+      uses: codecov/codecov-action@master
+      with:
+        flags: ${{ matrix.python-impl }},${{ matrix.python-release }},${{ env.OS }}
+        name: test-python-${{ matrix.python-version }}
+        fail_ci_if_error: true
+        token: ${{ secrets.CODECOV_TOKEN }}
