@@ -8,6 +8,7 @@ An algorithm that computes modular nested exponentiation efficiently.
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/mod-nest-exp?style=flat-square)](https://pypi.org/project/mod-nest-exp/#files)
 [![PyPI - Wheel](https://img.shields.io/pypi/wheel/mod-nest-exp?style=flat-square)](https://pypi.org/project/mod-nest-exp/#files)
 [![GitHub issues](https://img.shields.io/github/issues/avivbrook/modular-nested-exponentiation?style=flat-square)](https://github.com/avivbrook/modular-nested-exponentiation/issues)
+[![codecov](https://codecov.io/gh/avivbrook/modular-nested-exponentiation/branch/master/graph/badge.svg?token=5CWMO8OLNU)](https://codecov.io/gh/avivbrook/modular-nested-exponentiation)
 [![Downloads](https://img.shields.io/badge/dynamic/json?style=flat-square&color=303f9f&label=downloads&query=%24.total_downloads&url=https%3A%2F%2Fapi.pepy.tech%2Fapi%2Fprojects%2Fmod-nest-exp)](https://pepy.tech/project/mod-nest-exp)
 
 ## 🚩 Table of Contents
