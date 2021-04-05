@@ -2,13 +2,14 @@
 
 An algorithm that computes modular nested exponentiation efficiently.
 
-[![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/avivbrook/modular-nested-exponentiation/Test/master?logo=github&style=flat-square)](https://github.com/avivbrook/modular-nested-exponentiation/actions)
+<!-- [![GitHub Workflow Status (branch)](https://img.shields.io/github/workflow/status/avivbrook/modular-nested-exponentiation/Test/master?logo=github&style=flat-square)](https://github.com/avivbrook/modular-nested-exponentiation/actions) -->
 [![PyPI - License](https://img.shields.io/pypi/l/mod-nest-exp?style=flat-square)](https://choosealicense.com/licenses/gpl-3.0/)
+[![Source](https://img.shields.io/badge/source-GitHub-303030.svg?style=flat-square)](https://github.com/avivbrook/modular-nested-exponentiation/)
+[![codecov](https://codecov.io/gh/avivbrook/modular-nested-exponentiation/branch/master/graph/badge.svg?token=5CWMO8OLNU)](https://codecov.io/gh/avivbrook/modular-nested-exponentiation)
 [![PyPI](https://img.shields.io/pypi/v/mod-nest-exp?style=flat-square)](https://pypi.org/project/mod-nest-exp/)
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/mod-nest-exp?style=flat-square)](https://pypi.org/project/mod-nest-exp/#files)
-[![PyPI - Wheel](https://img.shields.io/pypi/wheel/mod-nest-exp?style=flat-square)](https://pypi.org/project/mod-nest-exp/#files)
-[![GitHub issues](https://img.shields.io/github/issues/avivbrook/modular-nested-exponentiation?style=flat-square)](https://github.com/avivbrook/modular-nested-exponentiation/issues)
-[![codecov](https://codecov.io/gh/avivbrook/modular-nested-exponentiation/branch/master/graph/badge.svg?token=5CWMO8OLNU)](https://codecov.io/gh/avivbrook/modular-nested-exponentiation)
+<!-- [![PyPI - Wheel](https://img.shields.io/pypi/wheel/mod-nest-exp?style=flat-square)](https://pypi.org/project/mod-nest-exp/#files) -->
+<!-- [![GitHub issues](https://img.shields.io/github/issues/avivbrook/modular-nested-exponentiation?style=flat-square)](https://github.com/avivbrook/modular-nested-exponentiation/issues) -->
 [![Downloads](https://img.shields.io/badge/dynamic/json?style=flat-square&color=303f9f&label=downloads&query=%24.total_downloads&url=https%3A%2F%2Fapi.pepy.tech%2Fapi%2Fprojects%2Fmod-nest-exp)](https://pepy.tech/project/mod-nest-exp)
 
 ## 🚩 Table of Contents
@@ -20,6 +21,8 @@ An algorithm that computes modular nested exponentiation efficiently.
 ## 🗺️ Overview
 
 `mod-nest-exp` exports a Python function `mod_nest_exp` that takes as input an arbitrarily long sequence of positive integers `a₁, a₂, ..., aₙ` and a positive integer `m` and computes `a₁^(a₂^(···^aₙ)) mod m` efficiently (that is, without computing the value of the nested exponent).
+
+To date, this problem was not solvable by computers in the general case.
 
 ## 🏳️ Prerequisites
 
