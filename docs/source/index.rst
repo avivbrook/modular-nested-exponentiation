@@ -50,6 +50,7 @@ Library
 
    Installation <install>
    To-do <todo>
+   About <about>
 
 Indices and tables
 ==================

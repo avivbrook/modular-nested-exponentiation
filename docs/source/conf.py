@@ -52,6 +52,7 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.coverage',
     'sphinx.ext.mathjax',
+    'sphinx.ext.viewcode',
     'sphinx_bootstrap_theme',
     'nbsphinx',
     'recommonmark',
@@ -99,7 +100,7 @@ html_theme_path = get_html_theme_path()
 html_theme_options = {
     'bootswatch_theme': 'darkly',
     # Choose Bootstrap version.
-    'bootstrap_version': '5',
+    'bootstrap_version': '4',
     # Tab name for entire site. (Default: "Site")
     'navbar_site_name': 'Documentation',
     # HTML navbar class (Default: "navbar") to attach to <div> element.
@@ -113,8 +114,7 @@ html_theme_options = {
     'navbar_links': [
         ('GitHub', _parser.get('metadata', 'url').strip(), True),
         ('CI', project_urls['CI'], True)
-    ],
-    'admonition_use_panel': True
+    ]
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
